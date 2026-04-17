@@ -28,20 +28,20 @@ const Login = () => {
     
 
     return (
-        <form onSubmit={handleLogin}>
+        <form onSubmit={handleLogin} className='flex flex-col gap-3 w-80 mx-auto mt-20 p-5 border rounded'>
             <input
-                type="text"
+                type="text" className='border p-2 rounded'
                   value={username}
                 placeholder="username (e.g. sophiab)"
                 onChange={(e) => setUsername(e.target.value)}
             />
             <input
-                type="password"
+                type="password" className='border p-2 rounded'
                 value={password}
               placeholder="password (e.g. sophiabpass)"
                 onChange={(e) => setPassword(e.target.value)}
             />
-             <button type="submit">
+             <button type="submit" className='bg-blue-500 text-white p-2 rounded'>
                 {loading ? "Logging in..." : "Login"}
             </button>
 
